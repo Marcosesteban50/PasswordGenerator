@@ -1,0 +1,106 @@
+﻿@model PasswordModel
+
+
+@{
+    ViewData["Title"] = "Generador De Contrasenas";
+}
+<div asp-validation-summary="None" class="text-danger"></div>
+
+<div class="IndexContainer">
+    <span class="borderLine"></span>
+
+
+
+    <form asp-controller="PasswordGenerator" asp-action="Index">
+        <h2>Generador de Contraseñas</h2>
+        <label class="labelLenght" asp-for="PasswordLength"></label>
+        <span class="spanValue" id="rangeValue">@Model.PasswordLength</span>
+        
+
+        <input class="range" type="range" min="1" max="30" asp-for="PasswordLength" name="PasswordLength"
+                value="@Model.PasswordLength" onChange="rangeSlider(this.value)" 
+               onmousemove="rangeSlider(this.value)" />
+       
+        <span asp-validation-for="PasswordLength" class="text-danger"></span>
+    <div class="hero">
+
+        <div class="contAiner">
+
+        <div class="Caracteres">
+            <p>Mayuscula</p>
+            <label>
+
+            <input asp-for="IncludeUpperCase" class="option-checkbox" type="checkbox"  name="IncludeUpperCase"> 
+            </label>
+         </div>
+                <div class="Caracteres">
+                    <p>Minusculas</p>
+                    <label>
+
+                        <input asp-for="IncludeLowerCase" class="option-checkbox" type="checkbox" name="IncludeLowerCase">
+                    </label>
+                </div>
+
+                <div class="Caracteres">
+                    <p>Numeros</p>
+                    <label>
+
+                        <input asp-for="IncludeNumbers" class="option-checkbox" type="checkbox" name="IncludeNumbers">
+                    </label>
+                </div>
+                <div class="Caracteres">
+                    <p>Symbolos</p>
+                    <label>
+
+                        <input asp-for="IncludeSymbols" class="option-checkbox" type="checkbox" name="IncludeSymbols">
+                    </label>
+                </div>
+
+                <div class="Caracteres">
+                    <p>Todo</p>
+                    <label>
+
+                        <input asp-for="IncludeAll" class="option-checkbox" type="checkbox" name="IncludeAll">
+                    </label>
+                </div>
+
+            
+
+        </div>
+    </div>
+
+    
+        
+        <button type="submit" class="btnGenerar">
+            Generar Password
+        </button>
+        
+
+    </form>
+
+</div>
+
+<p  id="contenidoParaCopiar"
+  class="pGeneratedPassword" data-aos="fade-up"
+   data-aos-duration="2000">@Model.GeneratedPassword</p>
+
+
+<button class="btnCopiad" id="btnCopiar"><i class="bi bi-copy"></i></button>
+<button class="moonButtom" id="MoonIcon"><i class="bi bi-moon-stars-fill"></i></button>
+
+
+
+
+
+
+
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+
+
+
+    
+
+   }
+

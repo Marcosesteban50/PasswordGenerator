@@ -1,0 +1,838 @@
+html {
+    font-size: 14px;
+}
+*{
+    box-sizing:border-box;
+}
+
+
+
+.btnMostrar{
+    position:absolute;
+}
+
+
+:root {
+    /*#6495ED*/
+    --primary-color: #6495ED;
+    --secondary-color: black;
+    --third-color: #6495ED;
+    --forth-color: #111;
+    --fifth-color:white;
+    --sixt-color:#6495ED;
+    --seventh-color:white;
+    --eigth-color:black;
+    transition: 0.5s;
+}
+
+.white-theme {
+    --primary-color: #F9F6EE;
+    --secondary-color: #F9F6EE;
+    --third-color: black;
+    --forth-color: white;
+    --fifth-color: black;
+    --sixt-color: gray;
+    --seventh-color: black;
+    --eigth-color:white;
+    transition: 0.5s;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+
+    .btnCopiad {
+        background: transparent;
+        backdrop-filter: blur(20px);
+        color: var(--third-color);
+        padding: 20px 20px;
+        font-size: 50px;
+        border: 1px solid var(--third-color);
+        position: absolute;
+        top: 60%;
+        left: 30%;
+        transition: 0.5s;
+        border-radius: 30px;
+        animation: Copiado 3s linear infinite;
+    }
+
+
+        .btnCopiad:hover {
+            background-color: var(--third-color);
+            color: var(--secondary-color);
+            padding: 40px;
+            border-radius: 50px;
+           
+        }
+
+    @keyframes Copiado{
+        0%{
+            padding:20px;
+        }
+        50%{
+            padding:30px;
+        }
+        100%{
+            padding:20px;
+        }
+    }
+
+
+    .IndexContainer {
+        position: relative;
+        width: 480px;
+        height: 600px;
+        
+        left: 32%;
+        
+        border-radius: 8px;
+        text-align: center;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+        .IndexContainer::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 480px;
+            height: 600px;
+            background: linear-gradient(0deg,transparent,transparent, var(--third-color),var(--primary-color),var(--primary-color));
+            z-index: 1;
+            transform-origin: bottom right;
+            animation: animate 6s linear infinite;
+        }
+        .IndexContainer::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 480px;
+            height: 600px;
+            background: linear-gradient(0deg,transparent,transparent, var(--third-color),var(--primary-color),var(--primary-color));
+            z-index: -1;
+            transform-origin: bottom right;
+            animation: animate 6s linear infinite;
+            animation-delay: -3s;
+        }
+
+
+    .borderLine{
+        position:absolute;
+        top:0;
+        inset:0;
+
+    }
+
+        .borderLine::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 480px;
+            height: 600px;
+            background: linear-gradient(0deg,transparent,transparent, var(--third-color),var(--primary-color),var(--primary-color));
+            z-index: 1;
+            transform-origin: bottom right;
+            animation: animate 6s linear infinite;
+            animation-delay: -1.5s;
+        }
+
+        .borderLine::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 480px;
+            height: 600px;
+            background: linear-gradient(0deg,transparent,transparent, var(--third-color),var(--primary-color),var(--primary-color));
+            z-index: 1;
+            transform-origin: bottom right;
+            animation: animate 6s linear infinite;
+            animation-delay: -4.5s;
+        }
+    @keyframes animate{
+        0%{
+            transform:rotate(0deg);
+        }
+        100%{
+            transform:rotate(360deg);
+        }
+    }
+
+
+    .moonButtom {
+        position: fixed;
+        top: 5%;
+        left: 90%;
+        background: transparent;
+        border: 1px solid var(--third-color);
+        color: var(--third-color);
+        border-radius: 30px;
+        padding: 10px 20px;
+        font-size: 50px;
+        transition: 0.5s;
+        animation: Copiado 3s linear infinite;
+    }
+        .moonButtom:hover {
+            background-color: var(--third-color);
+            color: var(--secondary-color);
+            border-radius: 35px;
+            
+        }
+
+
+
+
+
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .labelLenght {
+        color: var(--third-color);
+        opacity: 0.9;
+        position: relative;
+        top: -25px;
+    }
+
+    input {
+        position: relative;
+        top: 25px;
+    }
+
+
+
+
+    .borderLine {
+        position: absolute;
+        top: 0;
+        inset: 0;
+    }
+
+
+
+
+    .IndexContainer form {
+        position: absolute;
+        inset: 4px;
+        background: var(--forth-color);
+        padding: 50px 40px;
+        border-radius: 8px;
+        z-index: 1;
+    }
+
+    @keyframes animate {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+
+    h2 {
+        color: var(--third-color);
+        position: relative;
+        top: -30px;
+    }
+
+
+
+    .btnGenerar {
+        background: transparent;
+        backdrop-filter: blur(5px);
+        color: var(--third-color);
+        padding: 10px 5px;
+        border: 3px solid var(--third-color);
+        position: relative;
+        border-radius: 10px;
+        top: 30%;
+        left: 30%;
+        transition: 0.5s;
+    }
+
+        .btnGenerar:hover {
+            background-color: var(--third-color);
+            color: var(--eigth-color);
+            letter-spacing: 2px;
+        }
+
+
+    .pGeneratedPassword {
+        font-size: 30px;
+        transition: 0.5s;
+        position: relative;
+        top: 60px;
+        width: 50%;
+        height: 50%;
+        left: 25%;
+        text-align: center;
+        color: var(--third-color);
+        word-wrap: break-word;
+    }
+
+
+
+
+    p {
+        font-size: 20px;
+        color: var(--third-color);
+    }
+
+
+
+
+
+    .background {
+        min-height: 100vh;
+        position: absolute;
+        inset: 0;
+        background: var(--secondary-color);
+        filter: blur(3px);
+    }
+
+
+
+
+
+
+    .range {
+        width: 350px;
+        height: 18px;
+        position: relative;
+        top: 12px;
+        background-color: var(--eigth-color);
+        -webkit-appearance: none;
+        outline: none;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
+        .range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            transform: scale(0.9);
+            border-radius: 100%;
+            background: var(--seventh-color);
+            cursor: pointer;
+            border: 1px solid white;
+            box-shadow: -407px 0 0 400px var(--sixt-color);
+        }
+
+
+
+
+
+    #rangeValue {
+        padding: 2px;
+        width: 50px;
+        box-sizing: border-box;
+        background: transparent;
+        text-align: center;
+        position: relative;
+        top: -10px;
+        border: 3px solid var(--third-color);
+    }
+
+
+
+    .spanValue {
+        color: var(--third-color);
+        font-size: 30px;
+        position: relative;
+        display: block;
+        left: 44%;
+        border-radius: 10px;
+    }
+
+
+    .hero {
+        position: absolute;
+        top: 230px;
+        left: 20px;
+        padding: 20px 30px;
+        border: 1px solid var(--third-color);
+        border-radius: 10px;
+    }
+
+    .contAiner {
+        width: 150px;
+    }
+
+    .Caracteres {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0px;
+    }
+
+
+
+
+    input[type="checkbox"] {
+        position: relative;
+        top: 0px;
+        width: 50px;
+        height: 25px;
+        appearance: none;
+        -webkit-appearance: none;
+        background: var(--secondary-color);
+        outline: none;
+        border-radius: 20px;
+        box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        transition: 0.5s;
+    }
+
+    input:checked[type="checkbox"] {
+        background: var(--sixt-color);
+    }
+
+    input[type="checkbox"]:before {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+        top: -2px;
+        left: 0;
+        background: var(--fifth-color);
+        transform: scale(1);
+        transition: 0.5s;
+    }
+
+    input:checked[type="checkbox"]:before {
+        left: 20px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Vista Celular*/
+
+@media(max-width:948px){
+    .btnCopiad {
+        background: transparent;
+        backdrop-filter: blur(20px);
+        color: var(--third-color);
+        padding: 10px 10px;
+        border: 1px solid var(--third-color);
+        position: absolute;
+        top: 80%;
+        left: 10%;
+        transition: 0.5s;
+        border-radius: 30px;
+        font-size: 30px;
+        animation: Copiado 3s linear infinite;
+        z-index: 100;
+    }
+
+        .btnCopiad:hover {
+            background-color: var(--third-color);
+            color: var(--secondary-color);
+            border-radius: 50px;
+        }
+
+
+    .moonButtom {
+        position: fixed;
+        top: 80%;
+        left: 80%;
+        background: transparent;
+        border: 1px solid var(--third-color);
+        color: var(--third-color);
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 30px;
+        transition: 0.5s;
+        animation: Copiado 3s linear infinite;
+        z-index:100;
+        
+    }
+
+        .moonButtom:hover {
+            background-color: var(--third-color);
+            color: var(--secondary-color);
+           
+        }
+
+
+    @keyframes Copiado {
+        0% {
+            font-size: 20px;
+        }
+
+        50% {
+            font-size: 30px;
+        }
+
+        100% {
+            font-size: 20px;
+        }
+    }
+
+    .IndexContainer {
+        position: relative;
+        width: 380px;
+        height: 520px;
+        left: 10%;
+        border-radius: 8px;
+        text-align: center;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+
+
+
+
+        .IndexContainer::before {
+            content: '';
+            position: absolute;
+            top: -70%;
+            left: 28%;
+            width: 100px;
+            height: 600px;
+            background: linear-gradient(0deg,var(--third-color),var(--third-color), var(--third-color),var(--third-color),var(--third-color));
+            z-index: -1;
+            transform-origin: bottom right;
+            animation: animate 6s linear infinite;
+        }
+
+        .IndexContainer::after {
+            content: '';
+            position: absolute;
+            top: -70%;
+            left: 28%;
+            width: 100px;
+            height: 600px;
+            background: linear-gradient(0deg,var(--third-color),var(--third-color), var(--third-color),var(--third-color),var(--third-color));
+            z-index: -1;
+            transform-origin: bottom right;
+            animation: animate 6s linear infinite;
+            animation-delay: -4s;
+        }
+
+
+    borderLine {
+        position: absolute;
+        top: 0;
+        inset: 0;
+    }
+
+    .borderLine::before {
+        content: '';
+        position: absolute;
+        top: -70%;
+        left: 28%;
+        width: 100px;
+        height: 600px;
+        background: linear-gradient(0deg,var(--third-color),var(--third-color), var(--third-color),var(--third-color),var(--third-color));
+        z-index: -1;
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+        animation-delay: -1.5s;
+    }
+
+    .borderLine::after {
+        content: '';
+        position: absolute;
+        top: -70%;
+        left: 28%;
+        width: 100px;
+        height: 600px;
+        background: linear-gradient(0deg,var(--third-color),var(--third-color), var(--third-color),var(--third-color),var(--third-color));
+        z-index: -1;
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+        animation-delay: -4.5s;
+    }
+
+    @keyframes animate {
+        0%{
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .labelLenght {
+        color: var(--third-color);
+        opacity: 0.9;
+        position: relative;
+        top: -25px;
+    }
+
+    input {
+        position: relative;
+        top: 25px;
+    }
+
+
+
+
+    .borderLine {
+        position: absolute;
+        top: 0;
+        inset: 0;
+    }
+
+
+
+
+    .IndexContainer form {
+        position: absolute;
+        inset: 4px;
+        background: var(--forth-color);
+        padding: 50px 40px;
+        border-radius: 8px;
+        z-index: 1;
+    }
+
+   
+
+
+    h2 {
+        color: var(--third-color);
+        position: relative;
+        top: -30px;
+    }
+
+
+
+    .btnGenerar {
+        background: transparent;
+        backdrop-filter: blur(5px);
+        color: var(--third-color);
+        padding: 10px 5px;
+        border: 3px solid var(--third-color);
+        position: relative;
+        border-radius: 10px;
+        top: 30%;
+        left: 35%;
+        transition: 0.5s;
+    }
+
+        .btnGenerar:hover {
+            background-color: var(--third-color);
+            color: var(--eigth-color);
+            
+        }
+
+
+    .pGeneratedPassword {
+        font-size: 30px;
+        transition: 0.5s;
+        position: relative;
+        top: 10px;
+        width: 50%;
+        height: 50%;
+        left: 25%;
+        text-align: center;
+        color: var(--third-color);
+        word-wrap: break-word;
+        
+    }
+
+
+
+
+    p {
+        font-size: 20px;
+        color: var(--third-color);
+    }
+
+
+
+
+
+    .background {
+        min-height: 100vh;
+        position: absolute;
+        inset: 0;
+        background: var(--secondary-color);
+        filter: blur(3px);
+        overflow: hidden;
+    }
+
+
+
+
+
+
+    .range {
+        width: 300px;
+        height: 18px;
+        position: relative;
+        top: 12px;
+        background-color: var(--eigth-color);
+        -webkit-appearance: none;
+        outline: none;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
+        .range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            transform: scale(0.9);
+            border-radius: 100%;
+            background: var(--seventh-color);
+            cursor: pointer;
+            border: 1px solid white;
+            box-shadow: -407px 0 0 400px var(--sixt-color);
+        }
+
+
+
+
+
+    #rangeValue {
+        padding: 2px;
+        width: 50px;
+        box-sizing: border-box;
+        background: transparent;
+        text-align: center;
+        position: relative;
+        top: -10px;
+        border: 3px solid var(--third-color);
+    }
+
+
+
+    .spanValue {
+        color: var(--third-color);
+        font-size: 30px;
+        position: relative;
+        display: block;
+        left: 44%;
+        border-radius: 10px;
+    }
+
+
+    .hero {
+        position: absolute;
+        top: 235px;
+        left: 15px;
+        padding: 20px 30px;
+        border: 1px solid var(--third-color);
+        border-radius: 10px;
+    }
+
+    .contAiner {
+        width: 130px;
+    }
+
+    .Caracteres {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+       
+    }
+
+
+
+
+    input[type="checkbox"] {
+        position: relative;
+        top: 0px;
+        width: 30px;
+        height: 15px;
+        appearance: none;
+        -webkit-appearance: none;
+        background: var(--secondary-color);
+        outline: none;
+        border-radius: 20px;
+        box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        transition: 0.5s;
+    }
+
+    input:checked[type="checkbox"] {
+        background: var(--sixt-color);
+    }
+
+    input[type="checkbox"]:before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        top: -2px;
+        left: 0;
+        background: var(--fifth-color);
+        transform: scale(1);
+        transition: 0.5s;
+    }
+
+    input:checked[type="checkbox"]:before {
+        left: 20px;
+    }
+}
+
+
+
+
