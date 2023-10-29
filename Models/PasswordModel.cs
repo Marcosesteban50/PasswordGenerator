@@ -22,4 +22,12 @@ namespace GeneradorDeContrasenas.Models
         public bool IncludeSymbols { get; set; }
 
     }
+
+
+
+
+  
+
+
+   
 }
