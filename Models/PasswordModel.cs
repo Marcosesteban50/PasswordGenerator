@@ -12,13 +12,13 @@ namespace GeneradorDeContrasenas.Models
         public string GeneratedPassword { get; set; }
         [Display(Name ="Mayuscula")]
         public bool IncludeUpperCase { get; set; }
-        [Display(Name ="Numeros")]
+        [Display(Name ="Numero")]
         public bool IncludeNumbers { get; set; }
         [Display(Name ="Todo")]
         public bool IncludeAll { get; set; }
         [Display(Name ="Minusculas")]
         public bool IncludeLowerCase { get; set; }
-        [Display(Name ="Synbolos")]
+        [Display(Name ="Symbolos")]
         public bool IncludeSymbols { get; set; }
 
     }
